@@ -2,10 +2,7 @@ module github.com/cao7113/hello-api
 
 go 1.20
 
-require (
-	github.com/gin-gonic/gin v1.9.0
-	rsc.io/quote v1.5.2
-)
+require github.com/gin-gonic/gin v1.9.0
 
 require (
 	github.com/bytedance/sonic v1.8.2 // indirect
@@ -31,5 +28,4 @@ require (
 	golang.org/x/text v0.7.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
-	rsc.io/sampler v1.3.0 // indirect
 )

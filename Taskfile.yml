@@ -10,6 +10,17 @@ tasks:
         echo
         curl -s http://localhost:8080/user/foo | jq
 
+  ## Cross Compile
+  build:
+    cmds:
+      - GOOS=linux GOARCH=amd64 go build -o rel/api-amd64-linux .
+      # - GOOS=darwin GOARCH=amd64 go build -o rel/api-amd64-darwin .
+  build-hello:
+    cmds:
+      - GOOS=darwin GOARCH=amd64 go build -o rel/hello-amd64-darwin ./hello
+      - GOOS=linux GOARCH=amd64 go build -o rel/hello-amd64-linux ./hello
+
+  test-simple: go test ./simple
   run-hello: go run ./hello
   tidy: go mod tidy
   init-mod: go mod init github.com/cao7113/hello-api
