@@ -1,0 +1,15 @@
+# https://taskfile.dev
+version: "3"
+tasks:
+  run: GIN_MODE=release go run ./main.go
+  ping: curl http://localhost:8080/ping
+  admin:
+    cmds:
+      - |
+        curl -s -X POST 	http://localhost:8080/admin -H 'authorization: Basic Zm9vOmJhcg==' -H 'content-type: application/json' 	-d '{"value":"bar"}' | jq
+        echo
+        curl -s http://localhost:8080/user/foo | jq
+
+  run-hello: go run ./hello
+  tidy: go mod tidy
+  init-mod: go mod init github.com/cao7113/hello-api
