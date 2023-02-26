@@ -24,3 +24,13 @@ tasks:
   run-hello: go run ./hello
   tidy: go mod tidy
   init-mod: go mod init github.com/cao7113/hello-api
+
+  ## Release
+
+  # https://goreleaser.com/quick-start/
+  local-release: goreleaser release --snapshot --rm-dist --auto-snapshot --debug
+  init-goreleaser: goreleaser init
+  install-goreleaser:
+    cmds:
+      - brew install goreleaser
+      # brew install goreleaser/tap/goreleaser
