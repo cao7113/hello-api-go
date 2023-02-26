@@ -2,9 +2,11 @@ package main
 
 import (
 	"fmt"
+	"runtime"
 )
 
-func main() {
-	fmt.Println("Hello, World!")
+var version = "dev"
 
+func main() {
+	fmt.Println("Hello World! (", version, runtime.GOOS, runtime.GOARCH, ")")
 }

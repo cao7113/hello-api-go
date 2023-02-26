@@ -34,3 +34,12 @@ tasks:
     cmds:
       - brew install goreleaser
       # brew install goreleaser/tap/goreleaser
+
+  untar:
+    dir: dist
+    cmds:
+      - tar -xzf helloapi_Darwin_x86_64.tar.gz && ./helloapi
+  untar2:
+    dir: dist
+    cmds:
+      - tar -xzf helloapi_Linux_x86_64.tar.gz && ./helloapi
