@@ -85,6 +85,7 @@ func main() {
 	if v, ok := os.LookupEnv("PORT"); ok {
 		port = v
 	}
+
 	fmt.Println("Listen and Server in http://0.0.0.0:" + port)
 	r.Run(":" + port)
 }

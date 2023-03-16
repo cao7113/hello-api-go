@@ -43,3 +43,5 @@ tasks:
     dir: dist
     cmds:
       - tar -xzf helloapi_Linux_x86_64.tar.gz && ./helloapi
+
+  list-targets: go tool dist list
